@@ -6,12 +6,7 @@
   letter-spacing: 0.03em;
 }
 
-.select:last-child {
-  margin: 0;
-}
-
 .content {
-  margin-bottom: 10px;
   min-width: 85px;
   display: flex;
   align-items: center;
@@ -38,6 +33,7 @@
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   width: 65px;
   position: absolute;
+  top: 90px;
 }
 
 .item {

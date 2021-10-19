@@ -1,0 +1,4 @@
+.clothesCollections {
+    display: flex;
+    flex-wrap: wrap;
+}

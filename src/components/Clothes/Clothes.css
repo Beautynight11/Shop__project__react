@@ -1,0 +1,27 @@
+.clothes {
+    max-width: 220px;
+    cursor: pointer;
+}
+
+.clothes__photo {
+    width: 220px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.clothes__img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("../../images/Rectangle.png");
+}
+
+.clothes__name {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}

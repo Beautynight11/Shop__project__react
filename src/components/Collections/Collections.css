@@ -1,0 +1,10 @@
+.collections {
+    background-color: #F4F4F4;
+    padding-top: 130px;
+}
+
+.collections__content {
+    display: flex;
+    justify-content: space-between;
+}
+
