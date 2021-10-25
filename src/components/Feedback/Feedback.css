@@ -1,0 +1,32 @@
+.feedback {
+    background-color: black;
+    padding: 70px 0;
+}
+
+.feedback__content {
+    display: flex;
+    align-items: center;
+}
+
+.feedback__title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-right: 70px;
+    text-transform: uppercase;
+}
+
+.feedback__btn {
+    padding: 12px 14px 11px 13px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+.feedback__input {
+    margin-right: 35px;
+}

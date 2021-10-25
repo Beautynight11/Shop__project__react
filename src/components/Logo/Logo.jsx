@@ -1,13 +1,13 @@
 import React from 'react';
 import './Logo.css'
 
-const Logo = () => {
+const Logo = ({ className, classNameImg }) => {
     return (
         <div className='logo'>
-            <div className='logo__image'>
+            <div className={classNameImg}>
                 <div className='logo__img'/>
             </div>
-            <div className='logo__title'>The Loop</div>
+            <div className={className}>The Loop</div>
         </div>
     );
 };

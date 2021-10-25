@@ -28,16 +28,16 @@
 }
 
 .list {
-  border: 1px solid #212121;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   width: 65px;
   position: absolute;
   top: 90px;
+  background-color: #F9F6F1;
 }
 
 .item {
-  border-bottom: 1px solid #212121;
+  border-bottom: 1px solid lightgray;
   padding: 5px 10px;
   cursor: pointer;
 }

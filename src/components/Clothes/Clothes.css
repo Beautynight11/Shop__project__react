@@ -1,6 +1,5 @@
 .clothes {
-    max-width: 220px;
-    cursor: pointer;
+    min-width: 220px;
 }
 
 .clothes__photo {
@@ -24,4 +23,37 @@
     line-height: 26px;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 15px;
+}
+
+.clothes__active {
+    display: none;
+}
+
+.clothes__active--active {
+    display: block;
+}
+
+
+.clothes__info {
+    cursor: pointer;
+}
+/*.clothes__addedToCart {*/
+/*    font-weight: 300;*/
+/*    font-size: 16px;*/
+/*    line-height: 20px;*/
+/*    margin-bottom: 40px;*/
+/*    color: grey;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.clothes__addedToCart--active {*/
+/*    display: block;*/
+/*}*/
+
+.clothes__btn {
+    padding: 10px 20px;
+    position: relative;
+    left: 50%;
+    margin-left: -35px;
 }

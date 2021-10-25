@@ -6,9 +6,15 @@ import ClothesCollection from "../ClothesCollection/ClothesCollection";
 
 import './CollectionInfo.css';
 
-const CollectionInfo = ({name, title, collection, image}) => {
+const CollectionInfo = ({ name, title, collection, image, getCount }) => {
 
     const clothes = (name.toLowerCase() === 'men') ? MenCollection : WomenCollection;
+
+    // const [dress, setDress] = useState(clothes);
+
+    // const removeItem = (array) => {
+    //     setDress(dress.filter((el) => el.id !== array.id))
+    // };
 
     return (
         <div className='collectionInfo'>
@@ -16,13 +22,13 @@ const CollectionInfo = ({name, title, collection, image}) => {
                 <div className='collectionInfo__content'>
                     <div className='collectionInfo__title'><span>{name}</span> {title}</div>
                     <div className='collectionInfo__subtitle'>{collection}</div>
-                    <Button clName='collection__btn'/>
+                    <Button className='collection__btn'/>
                 </div>
                 <div className='collectionInfo__image'>
                     <div className='collectionInfo__img' style={{ backgroundImage:`url(${image})` }}/>
                 </div>
             </div>
-            <ClothesCollection array={clothes}/>
+            <ClothesCollection array={clothes} getCount={getCount}/>
         </div>
     );
 };

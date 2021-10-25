@@ -2,20 +2,28 @@ import shirt from '../images/Rectangle.png'
 
 const MenCollection = [
     {
-     img: shirt,
-     name: 'Shirt'
+        id: 1,
+        img: shirt,
+        name: 'Shirt',
+        price: 20
     },
     {
-     img: shirt,
-     name: 'Shirt'
+        id: 2,
+        img: shirt,
+        name: 'Shirt',
+        price: 20
     },
     {
-     img: shirt,
-     name: 'Shirt'
+        id: 3,
+        img: shirt,
+        name: 'Shirt',
+        price: 20
     },
     {
-     img: shirt,
-     name: 'Shirt'
+        id: 4,
+        img: shirt,
+        name: 'Shirt',
+        price: 20
     },
 ];
 

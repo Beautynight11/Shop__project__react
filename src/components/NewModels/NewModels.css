@@ -1,5 +1,6 @@
 .newModels {
     padding-top: 150px;
+    padding-bottom: 120px;
 }
 
 .newModels__title {
@@ -21,10 +22,33 @@
 
 .newModels__btn {
     position: relative;
-    padding-right: 64px;
     left: 50%;
     margin-left: -76px;
     margin-bottom: 150px;
+    text-transform: uppercase;
+    background-color: #d7b399;
+    color: #FFF;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    padding: 17px 64px 18px 35px;
+    opacity: 1;
+    transition: 300ms opacity;
+}
+
+.newModels__btn:hover {
+    opacity: 0.5;
+}
+
+.newModels__btn:link {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.newModels__btn:visited {
+    color: #FFF;
+    text-decoration: none;
 }
 
 .newModels__btn:after {

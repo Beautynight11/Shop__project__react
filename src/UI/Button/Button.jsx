@@ -1,9 +1,15 @@
 import React from 'react';
 import './Button.css'
 
-const Button = ({name, clName}) => {
+const Button = ({ name, className, type = 'button', ...props }) => {
     return (
-        <button className={clName}>{name}</button>
+        <button
+            type={type}
+            className={`button ${className}`}
+            {...props}
+        >
+            {name}
+        </button>
     );
 };
 

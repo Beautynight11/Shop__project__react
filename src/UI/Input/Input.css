@@ -1,0 +1,18 @@
+.input {
+    width: 255px;
+    height: 40px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px;
+    outline: none;
+    border: none;
+}
+
+.input::placeholder {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: #8D8D8D;
+}

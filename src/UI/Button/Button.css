@@ -1,4 +1,4 @@
-button {
+.button {
     padding: 17px 30px 18px 29px;
     background-color: #D7B399;
     border: none;
@@ -8,4 +8,10 @@ button {
     letter-spacing: 0.03em;
     color: #FFFFFF;
     cursor: pointer;
+    opacity: 1;
+    transition: 300ms opacity;
+}
+
+.button:hover {
+    opacity: 0.5;
 }

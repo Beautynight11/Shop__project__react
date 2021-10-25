@@ -1,10 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import './Clothes.css'
+import Button from "../../UI/Button/Button";
+import ActiveComponent from "../ActiveComponent/ActiveComponent";
 
-const Clothes = ({image, name}) => {
+const Clothes = ({ image, name, getCount, price }) => {
+
+    const [isActive, setIsActive] = useState(false);
+
+
+    const addToCart = () => {
+        getCount();
+        setIsActive(true)
+    };
+    const addingToCart = isActive ? 'clothes__active clothes__active--active' : 'clothes__active'
+
     return (
-        <div className='clothes'>
+        <div className='clothes' >
+            <ActiveComponent className={addingToCart} text='Added to cart'/>
+            {!isActive &&
             <div className='clothes__info'>
                 <div className='clothes__content'>
                     <div className='clothes__photo'>
@@ -12,9 +26,11 @@ const Clothes = ({image, name}) => {
                     </div>
                     <div className='clothes__name'>
                         {name}
+                        <div className='clothes__price'>{price + '$'}</div>
                     </div>
                 </div>
-            </div>
+                <Button name='Add' className='clothes__btn' onClick={addToCart} />
+            </div>}
         </div>
     );
 };

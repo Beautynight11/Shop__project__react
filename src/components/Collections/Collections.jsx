@@ -8,7 +8,7 @@ import photo2 from '../../images/Women.png'
 import './Collections.css'
 
 
-const Collections = () => {
+const Collections = ({ getCount }) => {
     const people = [
         {
             name: 'Men',
@@ -35,6 +35,7 @@ const Collections = () => {
                             collection={item.collection}
                             image={item.photo}
                             key={item.name}
+                            getCount={getCount}
                         />
                     })}
                 </div>

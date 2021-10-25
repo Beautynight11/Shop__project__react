@@ -1,0 +1,38 @@
+.footer {
+    background-color: black;
+    padding-top: 73px;
+    padding-bottom: 78px;
+}
+
+.footer__container {
+    display: flex;
+}
+
+.footer__content {
+    margin-right: 224px;
+}
+
+.footer__logo {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+.footer__logoImg {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.footer__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFF;
+    max-width: 200px;
+    margin-top: 32px;
+}
