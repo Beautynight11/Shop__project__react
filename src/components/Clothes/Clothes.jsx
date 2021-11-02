@@ -4,14 +4,15 @@ import './Clothes.css'
 import Button from "../../UI/Button/Button";
 import ActiveComponent from "../ActiveComponent/ActiveComponent";
 
-const Clothes = ({ image, name, getCount, price }) => {
+const Clothes = ({ image, name, getCount, price, getParams, id}) => {
 
     const [isActive, setIsActive] = useState(false);
 
 
-    const addToCart = () => {
+    const addToCart = (id, image, name, price) => {
         getCount();
-        setIsActive(true)
+        setIsActive(true);
+        getParams(id, image, name, price);
     };
     const addingToCart = isActive ? 'clothes__active clothes__active--active' : 'clothes__active'
 
@@ -29,7 +30,7 @@ const Clothes = ({ image, name, getCount, price }) => {
                         <div className='clothes__price'>{price + '$'}</div>
                     </div>
                 </div>
-                <Button name='Add' className='clothes__btn' onClick={addToCart} />
+                <Button name='Add' className='clothes__btn' onClick={() => addToCart(id, image, name, price)} />
             </div>}
         </div>
     );

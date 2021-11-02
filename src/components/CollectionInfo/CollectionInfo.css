@@ -1,5 +1,6 @@
 .collectionInfo__info {
     display: flex;
+    margin-bottom: 30px;
 }
 
 .collectionInfo__title {

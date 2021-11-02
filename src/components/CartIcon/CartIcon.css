@@ -1,16 +1,16 @@
-.basket {
+.cartIcon {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-.basket__image {
+.cartIcon__image {
     width: 30px;
     height: 27px;
     margin-right: 25px;
 }
 
-.basket__img {
+.cartIcon__img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -19,14 +19,14 @@
     background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2228%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m22.294%2010.49-6.056-9.082c-.275-.275-.688-.55-1.1-.55-.413%200-.826.137-1.101.55l-6.055%209.083H1.376C.55%2010.49%200%2011.04%200%2011.867v.413l3.44%2012.798c.276%201.101%201.377%202.064%202.615%202.064h17.89c1.238%200%202.34-.825%202.615-2.064L30%2012.28v-.413c0-.826-.55-1.376-1.376-1.376h-6.33Zm-11.285%200%204.129-6.054%204.128%206.055H11.01Zm4.129%2011.01a2.76%202.76%200%200%201-2.753-2.752%202.76%202.76%200%200%201%202.753-2.753%202.76%202.76%200%200%201%202.752%202.753%202.76%202.76%200%200%201-2.752%202.752Z%22%20fill%3D%22%23212121%22%2F%3E%3C%2Fsvg%3E");
 }
 
-.basket__amount {
+.cartIcon__amount {
     width: 33px;
     height: 15px;
     margin-bottom: -5px;
     background-color: #D7B399;
 }
 
-.basket__count {
+.cartIcon__count {
     font-size: 12px;
     line-height: 15px;
     text-align: center;
@@ -36,7 +36,7 @@
     position: relative;
 }
 
-.basket__count:before {
+.cartIcon__count:before {
     content: '';
     width: 0;
     height: 0;

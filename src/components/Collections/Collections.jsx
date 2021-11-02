@@ -1,41 +1,40 @@
 import React from 'react';
 import CollectionInfo from "../CollectionInfo/CollectionInfo";
+import MenCollection from "../../Store/MenCollection";
+import WomenCollection from "../../Store/WomenCollection";
 
-//TODO dynamic pictures
-import photo1 from '../../images/men.png'
-import photo2 from '../../images/Women.png'
 
 import './Collections.css'
 
 
-const Collections = ({ getCount }) => {
-    const people = [
-        {
-            name: 'Men',
-            title: 'collection',
-            collection: 'Shoes, pullovers, costumes',
-            photo: photo1
-        },
-        {
-            name: 'Women',
-            title: 'collection',
-            collection: 'Shoes, pullovers, costumes',
-            photo: photo2
-        }
-    ]
+const Collections = ({ getCount, getParams }) => {
 
     return (
         <div className='collections'>
             <div className='container'>
                 <div className='collections__content'>
-                    {people.map((item, index) => {
+                    {MenCollection.map((item) => {
                         return <CollectionInfo
                             name={item.name}
                             title={item.title}
                             collection={item.collection}
                             image={item.photo}
-                            key={item.name}
+                            key={item.id * Date.now()}
                             getCount={getCount}
+                            array={item.collections}
+                            getParams={getParams}
+                        />
+                    })}
+                    {WomenCollection.map((item) => {
+                        return <CollectionInfo
+                            name={item.name}
+                            title={item.title}
+                            collection={item.collection}
+                            image={item.photo}
+                            key={item.id * Date.now()}
+                            getCount={getCount}
+                            array={item.collections}
+                            getParams={getParams}
                         />
                     })}
                 </div>

@@ -4,7 +4,7 @@ import Clothes from "../Clothes/Clothes";
 import './ClothesCollections.css'
 // import ActiveComponent from "../ActiveComponent/ActiveComponent";
 
-const ClothesCollection = ({ array, getCount }) => {
+const ClothesCollection = ({ array, getCount, getParams }) => {
 
     return (
         <div className='clothesCollections'>
@@ -16,6 +16,8 @@ const ClothesCollection = ({ array, getCount }) => {
                     getCount={getCount}
                     item={item}
                     price={item.price}
+                    getParams={getParams}
+                    id={item.id}
                 />
             })}
         </div>

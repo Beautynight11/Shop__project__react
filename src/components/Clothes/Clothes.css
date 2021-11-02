@@ -1,11 +1,12 @@
 .clothes {
     min-width: 220px;
+    margin-bottom: 20px;
 }
 
 .clothes__photo {
-    width: 220px;
-    height: 200px;
-    margin-bottom: 10px;
+    width: 250px;
+    height: 230px;
+    padding: 25px;
 }
 
 .clothes__img {
@@ -38,18 +39,6 @@
 .clothes__info {
     cursor: pointer;
 }
-/*.clothes__addedToCart {*/
-/*    font-weight: 300;*/
-/*    font-size: 16px;*/
-/*    line-height: 20px;*/
-/*    margin-bottom: 40px;*/
-/*    color: grey;*/
-/*    text-align: center;*/
-/*}*/
-
-/*.clothes__addedToCart--active {*/
-/*    display: block;*/
-/*}*/
 
 .clothes__btn {
     padding: 10px 20px;

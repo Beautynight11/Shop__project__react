@@ -1,5 +1,5 @@
 .clothesCollections {
     display: flex;
     flex-wrap: wrap;
-    min-width: 650px;
+    min-width: 600px;
 }

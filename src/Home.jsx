@@ -8,12 +8,12 @@ import Footer from "./components/Footer/Footer";
 
 import './Home.css'
 
-const Home = ({ count, setCount }) => {
+const Home = ({ getCount, getParams }) => {
     return (
         <div className='home'>
             <FirstScreen/>
             <SecondScreen/>
-            <Collections getCount={() => setCount(count + 1)}/>
+            <Collections getCount={getCount} getParams={getParams}/>
             <NewModels title='New Models'/>
             <Feedback/>
             <NewModels title='discounts up to 90%'/>

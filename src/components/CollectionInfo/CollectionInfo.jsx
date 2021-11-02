@@ -1,14 +1,10 @@
 import React from 'react';
 import Button from "../../UI/Button/Button";
-import WomenCollection from '../../Store/WomenCollection';
-import MenCollection from '../../Store/MenCollection';
 import ClothesCollection from "../ClothesCollection/ClothesCollection";
 
 import './CollectionInfo.css';
 
-const CollectionInfo = ({ name, title, collection, image, getCount }) => {
-
-    const clothes = (name.toLowerCase() === 'men') ? MenCollection : WomenCollection;
+const CollectionInfo = ({ name, title, collection, image, getCount, array, getParams }) => {
 
     // const [dress, setDress] = useState(clothes);
 
@@ -28,7 +24,11 @@ const CollectionInfo = ({ name, title, collection, image, getCount }) => {
                     <div className='collectionInfo__img' style={{ backgroundImage:`url(${image})` }}/>
                 </div>
             </div>
-            <ClothesCollection array={clothes} getCount={getCount}/>
+            <ClothesCollection
+                array={array}
+                getCount={getCount}
+                getParams={getParams}
+            />
         </div>
     );
 };
