@@ -1,7 +1,7 @@
 import React from 'react';
 import CollectionInfo from "../CollectionInfo/CollectionInfo";
-import MenCollection from "../../Store/MenCollection";
-import WomenCollection from "../../Store/WomenCollection";
+import { MenCollections as men } from "../../constants/clothesCollections";
+import { WomenCollections as women } from "../../constants/clothesCollections";
 
 
 import './Collections.css'
@@ -13,7 +13,7 @@ const Collections = ({ getCount, getParams }) => {
         <div className='collections'>
             <div className='container'>
                 <div className='collections__content'>
-                    {MenCollection.map((item) => {
+                    {men.map((item) => {
                         return <CollectionInfo
                             name={item.name}
                             title={item.title}
@@ -25,7 +25,7 @@ const Collections = ({ getCount, getParams }) => {
                             getParams={getParams}
                         />
                     })}
-                    {WomenCollection.map((item) => {
+                    {women.map((item) => {
                         return <CollectionInfo
                             name={item.name}
                             title={item.title}

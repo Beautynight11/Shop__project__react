@@ -1,5 +1,5 @@
 import React from 'react';
-import ModelInfo from "../../Store/ModelInfo";
+import ModelInfo from "../../constants/modelInfo";
 import Model from "../Model/Model";
 
 import './AllModels.css'

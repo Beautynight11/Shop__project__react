@@ -1,0 +1,19 @@
+.select {
+  position: relative;
+  width: 100%;
+}
+
+.list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+}
+
+.select__error {
+  color: red;
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 15px;
+  margin-top: 7px;
+}

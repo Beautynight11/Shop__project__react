@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Model from "../Model/Model";
-import ModelInfo from "../../Store/ModelInfo";
+import ModelInfo from "../../constants/modelInfo";
 
 import './NewModels.css'
 

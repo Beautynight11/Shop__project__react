@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import Input from "../../UI/Input/Input";
-import Button from "../../UI/Button/Button";
+import Input from "../UI/Input/Input";
+import Button from "../UI/Button/Button";
 
 import './Feedback.css'
 
@@ -24,11 +24,11 @@ const Feedback = () => {
                     <div className='feedback__title'>receive gifts and discounts</div>
                     <Input
                         placeholder='Your e-mail'
-                        name='feedback__input'
+                        className='feedback__input'
                         value={valueInput}
                         onChange={handleChange}
                     />
-                    <Button className='feedback__btn' name='Subscribe' type='submit' />
+                    <Button className='feedback__btn' title='Subscribe' type='submit' />
                 </div>
             </div>
         </form>

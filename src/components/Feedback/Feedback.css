@@ -29,4 +29,6 @@
 
 .feedback__input {
     margin-right: 35px;
+    width: 255px;
+    height: 40px;
 }

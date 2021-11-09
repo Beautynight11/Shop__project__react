@@ -8,13 +8,13 @@ import ModalWindow from "./components/ModalWindow/ModalWindow";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 import './App.css';
+import Footer from "./components/Footer/Footer";
 
 function App() {
     const [count, setCount] = useState(0);
     const [isCart, setIsCart] = useState(false);
     const [cart, setCart] = useState([]);
     const [isEmpty, setIsEmpty] = useState(false);
-    const [scrollButton, setScrollButton] = useState('btnToTop')
 
 
     const getParams = (id, image, name, price) => {
@@ -36,19 +36,26 @@ function App() {
         if (cart.length === 1) {
             setIsEmpty(false);
         }
-        console.log(cart.length, count)
     }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScrollClass);
 
         function handleScrollClass () {
-            setScrollButton((window.pageYOffset > 120) ? 'btnToTop btnToTop--active' : 'btnToTop');
+            if (window.pageYOffset > 120) {
+                document.getElementById('scrollToTop').classList.add('btnToTop--active')
+            } else {
+                document.getElementById('scrollToTop').classList.remove('btnToTop--active')
+            }
+        }
+
+        return () => {
+            window.removeEventListener('scroll', handleScrollClass);
         }
     })
 
     const returnToTop = () => {
-        window.scrollTo({top: 0, behavior: 'smooth'})
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
 
@@ -68,6 +75,7 @@ function App() {
                         <AllModels/>
                     </Route>
                 </Switch>
+                <Footer/>
             </Router>
             {isCart && <ModalWindow
                 closeWindow={() => setIsCart(false)}
@@ -75,7 +83,7 @@ function App() {
                 isEmpty={isEmpty}
                 deleteItem={deleteItem}
             />}
-            <div className={scrollButton} onClick={() => returnToTop()}/>
+            <div id='scrollToTop' className='btnToTop' onClick={() => returnToTop()}/>
         </div>
     );
 }

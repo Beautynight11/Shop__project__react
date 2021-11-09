@@ -4,6 +4,7 @@ import './Footer.css'
 import Logo from "../Logo/Logo";
 import FooterColumn from "../FooterColumn/FooterColumn";
 import Social from "../Social/Social";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     const text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus egestas elit, at eleifend elit ornare ut.'
@@ -13,7 +14,9 @@ const Footer = () => {
             <div className='container'>
                 <div className='footer__container'>
                     <div className='footer__content'>
-                        <Logo clName='footer__logo' clNameImg='footer__logoImg'/>
+                        <Link to='/' className='footer__link'>
+                            <Logo className='footer__logo' classNameImg='footer__logoImg'/>
+                        </Link>
                         <div className='footer__text'>
                             {text}
                         </div>

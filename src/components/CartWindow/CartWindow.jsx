@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Button from "../../UI/Button/Button";
+import Button from "../UI/Button/Button";
 import CartModel from "../CartModel/CartModel";
 
 import './CartWindow.css'
@@ -30,16 +30,16 @@ const CartWindow = ({ object, closeWindow, goToCheckout, isEmpty, deleteItem }) 
                     ))
                 }
                 {!isEmpty && <div className='cartWindow__empty'>Cart is empty</div>}
-                <div className='cartWindow__total'>Total price: {price}</div>
+                {isEmpty && <div className='cartWindow__total'>Total price: {price}</div>}
                 <div className='cartWindow__buttons'>
                     <Button
                         className='cartWindow__button cartWindow__button--cancel'
-                        name='Cancel'
+                        title='Cancel'
                         onClick={closeWindow}
                     />
                     <Button
                         className='cartWindow__button cartWindow__button--checkout'
-                        name='Checkout'
+                        title='Checkout'
                         onClick={goToCheckout}
                     />
                 </div>

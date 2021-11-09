@@ -9,3 +9,17 @@
     z-index: 200;
     top: 0;
 }
+
+.modalWindow__end {
+    padding: 100px 25px;
+    background-color: #FFF;
+    border-radius: 40px;
+    width: 700px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.04em;
+    color: #212121;
+}

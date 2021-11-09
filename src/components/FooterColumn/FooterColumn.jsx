@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterLinks from "../../Store/FooterLinks";
+import FooterLinks from "../../constants/footerLinks";
 
 import './FooterColumn.css'
 

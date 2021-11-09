@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import './Clothes.css'
-import Button from "../../UI/Button/Button";
+import Button from "../UI/Button/Button";
 import ActiveComponent from "../ActiveComponent/ActiveComponent";
 
 const Clothes = ({ image, name, getCount, price, getParams, id}) => {
@@ -30,7 +30,7 @@ const Clothes = ({ image, name, getCount, price, getParams, id}) => {
                         <div className='clothes__price'>{price + '$'}</div>
                     </div>
                 </div>
-                <Button name='Add' className='clothes__btn' onClick={() => addToCart(id, image, name, price)} />
+                <Button title='Add' className='clothes__btn' onClick={() => addToCart(id, image, name, price)} />
             </div>}
         </div>
     );

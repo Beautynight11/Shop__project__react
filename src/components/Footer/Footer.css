@@ -21,6 +21,10 @@
     color: #FFF;
 }
 
+.footer__link:link {
+    text-decoration: none;
+}
+
 .footer__logoImg {
     width: 30px;
     height: 30px;

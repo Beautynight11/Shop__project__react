@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialStore from "../../Store/SocialStore";
+import SocialStore from "../../constants/socialStore";
 
 
 import './Social.css'
