@@ -7,12 +7,12 @@ import Feedback from "./components/Feedback/Feedback";
 
 import './Home.css'
 
-const Home = ({ getCount, getParams }) => {
+const Home = () => {
     return (
         <div className='home'>
             <FirstScreen/>
             <SecondScreen/>
-            <Collections getCount={getCount} getParams={getParams}/>
+            <Collections/>
             <NewModels title='New Models'/>
             <Feedback/>
             <NewModels title='discounts up to 90%'/>

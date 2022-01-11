@@ -4,13 +4,7 @@ import ClothesCollection from "../ClothesCollection/ClothesCollection";
 
 import './CollectionInfo.css';
 
-const CollectionInfo = ({ name, title, collection, image, getCount, array, getParams }) => {
-
-    // const [dress, setDress] = useState(clothes);
-
-    // const removeItem = (array) => {
-    //     setDress(dress.filter((el) => el.id !== array.id))
-    // };
+const CollectionInfo = ({ name, title, collection, image, getCount, array }) => {
 
     return (
         <div className='collectionInfo'>
@@ -27,7 +21,6 @@ const CollectionInfo = ({ name, title, collection, image, getCount, array, getPa
             <ClothesCollection
                 array={array}
                 getCount={getCount}
-                getParams={getParams}
             />
         </div>
     );

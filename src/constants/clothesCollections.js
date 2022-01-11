@@ -47,25 +47,25 @@ export const WomenCollections = [
         photo: photo2,
         collections: [
             {
-                id: 1,
+                id: 5,
                 img: dress,
                 name: 'Dress',
                 price: 50
             },
             {
-                id: 2,
+                id: 6,
                 img: dress,
                 name: 'Dress',
                 price: 50
             },
             {
-                id: 3,
+                id: 7,
                 img: dress,
                 name: 'Dress',
                 price: 50
             },
             {
-                id: 4,
+                id: 8,
                 img: dress,
                 name: 'Dress',
                 price: 50

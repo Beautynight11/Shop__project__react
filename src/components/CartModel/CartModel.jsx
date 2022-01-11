@@ -1,20 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { decreaseQuantityCart, removeFromCart } from "../../actions/cart";
+import { useDispatch } from "react-redux";
+import { addToCartAction } from "../../actions/cart";
 
 import './CartModel.css'
 
-const CartModel = ({ deleteItem, item, setPrice }) => {
-    const [current, setCurrent] = useState(1);
+const CartModel = ({ item }) => {
+    const dispatch = useDispatch();
+    const checkPrice = item.price * item.quantity;
 
-    const checkPrice = item.price * current;
+  const increaseQuantity = () => {
+    dispatch(addToCartAction(item))
+  }
 
-    const increase = () => {
-        setCurrent(current + 1);
-    };
+  const decreaseQuantity = (quantity) => {
+    dispatch(decreaseQuantityCart(item));
+    if (quantity < 2) {
+      dispatch(removeFromCart(item))
+    }
+  }
+  
+  const removeFromCartList = () => {
+    dispatch(removeFromCart(item))
+  }
 
     return (
         <div className='cartModel__info'>
             <div className='cartModel__delete'>
-                <div className='cartModel__image' onClick={() => deleteItem(item)}/>
+                <div className='cartModel__image' onClick={() => removeFromCartList()}/>
             </div>
             <div className='cartModel__name'>{item.name}</div>
             <div className='cartModel__model'>
@@ -22,13 +35,9 @@ const CartModel = ({ deleteItem, item, setPrice }) => {
             </div>
             <div className='cartModel__quantity'>
                 <div
-                    className='cartModel__btn cartModel__btn--plus'
-                    onClick={() => increase()}
-                />
-                <div className='cartModel__current'>{current}</div>
-                <div className='cartModel__btn cartModel__btn--minus'
-                     onClick={() => current !== 1 ? setCurrent(current - 1) : 1}
-                />
+                    className='cartModel__btn cartModel__btn--minus' onClick={() => decreaseQuantity(item.quantity)}/>
+                <div className='cartModel__current'>{item.quantity}</div>
+                <div className='cartModel__btn cartModel__btn--plus' onClick={() => increaseQuantity()}/>
             </div>
             <div
                 className='cartModel__price'>

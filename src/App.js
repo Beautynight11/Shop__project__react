@@ -1,42 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 import Home from "./Home";
 import Header from "./components/Header/Header";
 import AllModels from "./components/AllModels/AllModels";
 import ModalWindow from "./components/ModalWindow/ModalWindow";
 
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-
-import './App.css';
 import Footer from "./components/Footer/Footer";
 
+import './App.css';
+
 function App() {
-    const [count, setCount] = useState(0);
-    const [isCart, setIsCart] = useState(false);
-    const [cart, setCart] = useState([]);
-    const [isEmpty, setIsEmpty] = useState(false);
-
-
-    const getParams = (id, image, name, price) => {
-        setCart([...cart,
-                {
-                    id: id,
-                    name: name,
-                    price: price,
-                    image: image
-                }
-            ]
-        )
-        setIsEmpty(true);
-    };
-
-    const deleteItem = (item) => {
-        setCart(cart.filter(elem => item.id !== elem.id));
-        setCount(count - 1);
-        if (cart.length === 1) {
-            setIsEmpty(false);
-        }
-    }
+    const [isCartOpen, setIsCartOpen] = useState(false);
+    const cart = useSelector(state => state.cart.list);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScrollClass);
@@ -62,27 +40,27 @@ function App() {
     return (
         <div className="App">
             <Router>
-                <Header count={count} openCart={() => setIsCart(true)}/>
+                <Header
+                  count={cart.length}
+                  openCart={() => setIsCartOpen(true)}
+                />
                 <ScrollToTop/>
                 <Switch>
                     <Route exact path='/'>
-                        <Home
-                            getCount={() => setCount(count + 1)}
-                            getParams={getParams}
-                        />
+                        <Home />
                     </Route>
                     <Route path='/models'>
-                        <AllModels/>
+                        <AllModels />
                     </Route>
                 </Switch>
                 <Footer/>
             </Router>
-            {isCart && <ModalWindow
-                closeWindow={() => setIsCart(false)}
-                object={cart}
-                isEmpty={isEmpty}
-                deleteItem={deleteItem}
-            />}
+            {isCartOpen && (
+              <ModalWindow
+                closeWindow={() => setIsCartOpen(false)}
+                cart={cart}
+              />
+            )}
             <div id='scrollToTop' className='btnToTop' onClick={() => returnToTop()}/>
         </div>
     );

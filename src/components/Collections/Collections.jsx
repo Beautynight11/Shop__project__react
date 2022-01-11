@@ -7,7 +7,7 @@ import { WomenCollections as women } from "../../constants/clothesCollections";
 import './Collections.css'
 
 
-const Collections = ({ getCount, getParams }) => {
+const Collections = ({ getCount }) => {
 
     return (
         <div className='collections'>
@@ -22,7 +22,6 @@ const Collections = ({ getCount, getParams }) => {
                             key={item.id * Date.now()}
                             getCount={getCount}
                             array={item.collections}
-                            getParams={getParams}
                         />
                     })}
                     {women.map((item) => {
@@ -34,7 +33,6 @@ const Collections = ({ getCount, getParams }) => {
                             key={item.id * Date.now()}
                             getCount={getCount}
                             array={item.collections}
-                            getParams={getParams}
                         />
                     })}
                 </div>

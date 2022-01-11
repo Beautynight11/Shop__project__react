@@ -27,15 +27,6 @@
     margin-bottom: 15px;
 }
 
-.clothes__active {
-    display: none;
-}
-
-.clothes__active--active {
-    display: block;
-}
-
-
 .clothes__info {
     cursor: pointer;
 }

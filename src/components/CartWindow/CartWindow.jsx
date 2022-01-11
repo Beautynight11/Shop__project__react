@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from "../UI/Button/Button";
 import CartModel from "../CartModel/CartModel";
 
 import './CartWindow.css'
 
-const CartWindow = ({ object, closeWindow, goToCheckout, isEmpty, deleteItem }) => {
-    const [price, setPrice] = useState(0);
-    // const [total, selTotal] = useState(0);
+const CartWindow = ({ cart, closeWindow, goToCheckout }) => {
+    const isEmpty = cart.length === 0;
 
-    // const t = () => {
-    //     console.log(price)
-    // }
+    const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0)
 
 
     return (
@@ -19,18 +16,16 @@ const CartWindow = ({ object, closeWindow, goToCheckout, isEmpty, deleteItem }) 
                 <div className='cartWindow__title'>
                     <span>Cart</span>
                 </div>
-                {isEmpty &&
-                object.map((item, index) => (
+                {!isEmpty &&
+                cart.map((item, index) => (
                     <CartModel
-                        deleteItem={deleteItem}
                         key={(index + 1) * Date.now()}
                         item={item}
-                        setPrice={() => setPrice}
                     />
                     ))
                 }
-                {!isEmpty && <div className='cartWindow__empty'>Cart is empty</div>}
-                {isEmpty && <div className='cartWindow__total'>Total price: {price}</div>}
+                {isEmpty && <div className='cartWindow__empty'>Cart is empty</div>}
+                {!isEmpty && <div className='cartWindow__total'>Total price: {totalPrice}$</div>}
                 <div className='cartWindow__buttons'>
                     <Button
                         className='cartWindow__button cartWindow__button--cancel'
@@ -41,6 +36,7 @@ const CartWindow = ({ object, closeWindow, goToCheckout, isEmpty, deleteItem }) 
                         className='cartWindow__button cartWindow__button--checkout'
                         title='Checkout'
                         onClick={goToCheckout}
+                        disabled={isEmpty}
                     />
                 </div>
             </div>

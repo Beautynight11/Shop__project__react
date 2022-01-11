@@ -4,7 +4,7 @@ import Checkout from "../Checkout/Checkout";
 
 import './ModalWindow.css'
 
-const ModalWindow = ({ closeWindow, object, isEmpty, deleteItem }) => {
+const ModalWindow = ({ closeWindow, cart }) => {
     const [checkout, setCheckout] = useState(false);
     const [isSend, setIsSend] = useState(false);
 
@@ -15,11 +15,9 @@ const ModalWindow = ({ closeWindow, object, isEmpty, deleteItem }) => {
     return (
         <div className='modalWindow' onClick={closeWindow}>
             {!checkout && <CartWindow
-                object={object}
+                cart={cart}
                 closeWindow={closeWindow}
                 goToCheckout={goToCheckout}
-                isEmpty={isEmpty}
-                deleteItem={deleteItem}
             />}
             {(checkout && !isSend)&& <Checkout setIsSend={setIsSend}/>}
             {isSend && <div className='modalWindow__end'>Thank you!</div> }

@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect } from 'react';
 import CartIcon from "../CartIcon/CartIcon";
 import { Link } from "react-router-dom";
-
 
 import SubMenu from "../SubMenu/SubMenu";
 import Logo from "../Logo/Logo";
